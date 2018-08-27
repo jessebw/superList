@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jbw work</title>
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:400,500" rel="stylesheet">
+
+  <!-- custom style -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body{
+      width: 100%;
+      /* height: 100vh; */
+      overflow: scroll;
+      overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+      width: 0px;  /* remove scrollbar space */
+      /* background: transparent;  optional: just make scrollbar invisible */
+    }
+
+    .wrapper{
+      width: 100%;
+      display: grid;
+      grid-template-areas: 
+        "header"
+        "heading"
+        "mainContent"
+        "footer";
+        /* position: relative; */
+        /* margin-bottom: 0; */
+    }
+    header{
+      background-color: aquamarine;
+      grid-area: header;
+    }
+
+    .wordHeading{
+      grid-area: heading;
+      margin: 5em auto;
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    .container {
+      grid-area: mainContent;
+      font-size: 40px;
+      min-height: 300px;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+      grid-gap: .5em;
+      justify-items: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    .box{
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      background-color: transparent;
+      /* border: 1px solid black; */
+      /* width: 100%; */
+      /* height: 100%; */
+    }
+    .btm{
+      margin-top: 2em;
+      background-color: aquamarine;
+      grid-area: footer;
+      /* margin-bottom: 0; */
+    }
+    .pic {
+      height: 200px;
+      width: 90%;
+      background-image: url('../img/audioSampler.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: skewX(-5deg);
+    }
+    .overview{
+      font-size: .3em;
+    }
+    .overview p {
+      margin-top: 10px;
+      width: 80%;
+      
+    }
+    
+  </style>
+
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+        <nav>
+          <div>
+            <p>this will be the nav bar</p>
+          </div>
+        </nav>
+    </header>
+        <div class="wordHeading">
+            <h1>Audio Sampler</h1>
+            <p>html / css / javascript</p>
+        </div>
+    <div class="container">
+      <div class="box pic"></div>
+      <div class="box overview">
+        <p>This was a small project myself and some of my class mates undertook. It was an exorcise in learning abit more about vanilla javascript.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu justo vel sem porttitor consectetur. Aliquam ut viverra lorem, sed consectetur magna. Donec et pellentesque mi, ac vestibulum massa.</p>
+        <p>Aliquam molestie ligula in tempor mattis. In sit amet arcu vel erat consequat aliquam sit amet in mauris. Pellentesque eu nunc malesuada, viverra urna eget, congue enim. Sed varius leo ipsum, in rhoncus libero condimentum eu. Vivamus auctor aliquet blandit. Suspendisse potenti. Duis vestibulum consectetur enim vitae volutpat. Quisque sed convallis risus. Cras a lectus dignissim enim congue porta eu ac elit. Nulla at condimentum orci.</p>
+      </div>
+      <dir class="box customBtn">Visit site</dir>
+    </div>
+
+    <div class="btm">
+      <p>this is the footer</p>
+    </div>
+  </div>
+</body>
+</html>

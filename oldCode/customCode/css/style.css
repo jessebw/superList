@@ -1,0 +1,143 @@
+
+/* designed for mobile first */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: gradient(135deg, rgba(240,0,0,1) 17%, rgba(0,212,255,1) 100%);;;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: justify;
+}
+.content{
+    width: 33%;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+/* hr{
+    width: 85%;
+    margin: 0 auto;
+} */
+h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    text-transform: capitalize;
+}
+ul{
+    list-style-type: none;
+    margin-top: 2em;
+    width: 100%;
+}
+li{
+    display: block; 
+    float: none;
+    text-align: center;
+    width: 100%;
+    line-height: 2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* buttons */
+
+/* dropdown */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+/* /dropdown */
+
+a:link, a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: linear-gradient(135deg, rgba(182,139,255,1) 17%, rgba(0,212,255,1) 100%);;
+}
+a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, rgba(182,139,255,1) 17%, rgba(0,212,255,1) 100%);
+    transition: width .3s;
+}
+a:hover::after{
+    width: 100%;
+}
+
+a:active{
+    color: lightblue;
+}
+.mobileHide{
+    display: none;
+}
+fpMenu{
+    margin: 0 auto;
+    display: grid;
+}
+
+
+/* media queries for anyhthing larger than 600px */
+@media only screen and (min-width: 600px) {
+    li{
+        list-style: none;
+        float: left;
+        width: 20%;
+        font-size: 400;
+        text-align: center;
+        line-height: 2em;
+    }
+    .mobileHide{
+        display: inline;
+    }
+    fpMenu{
+        display: grid;
+    }
+}
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jesse</title>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:400,500" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* designed for mobile first */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            color: gradient(135deg, rgba(240,0,0,1) 17%, rgba(0,212,255,1) 100%);;;
+        }
+        .wrapper{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            text-align: justify;
+        }
+        .content{
+            width: 33%;
+        }
+
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 1.5em;
+            font-family: 'Roboto', sans-serif;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+        /* hr{
+            width: 85%;
+            margin: 0 auto;
+        } */
+        h2{
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            text-transform: capitalize;
+        }
+        ul{
+            list-style-type: none;
+            margin-top: 2em;
+            width: 100%;
+        }
+        li{
+            display: block; 
+            float: none;
+            text-align: center;
+            width: 100%;
+            line-height: 2em;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a:link, a:visited{
+            color: black;
+            text-decoration: none;
+        }
+        a:hover{
+            color: linear-gradient(135deg, rgba(182,139,255,1) 17%, rgba(0,212,255,1) 100%);;
+        }
+        a::after{
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, rgba(182,139,255,1) 17%, rgba(0,212,255,1) 100%);
+            transition: width .3s;
+        }
+        a:hover::after{
+            width: 100%;
+        }
+
+        a:active{
+            color: lightblue;
+        }
+        .mobileHide{
+            display: none;
+        }
+        fpMenu{
+            margin: 0 auto;
+            display: grid;
+        }
+
+        
+        /* media queries for anyhthing larger than 600px */
+        @media only screen and (min-width: 600px) {
+            li{
+                list-style: none;
+                float: left;
+                width: 20%;
+                font-size: 400;
+                text-align: center;
+                line-height: 2em;
+            }
+            .mobileHide{
+                display: inline;
+            }
+            fpMenu{
+                display: grid;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="content">
+            <div>
+            <h1>jesse walsh</h1>
+            <!-- <hr> -->
+            <h2>web developer</h2>
+        </div>
+            <div class="fpMenu">
+                <ul>
+                    <li><a href="work.html" class="borderAnimate">work</a></li>
+                    <li class="mobileHide">/</li>
+                    <li><a href="blog.html" class="borderAnimate">blog</a></li>
+                    <li class="mobileHide">/</li>
+                    <li><a href="#" class="borderAnimate">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery CDN -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <!-- custom javascript -->
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>
